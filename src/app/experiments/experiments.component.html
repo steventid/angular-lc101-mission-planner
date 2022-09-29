@@ -1,7 +1,18 @@
 <div class="displayBox">
-    <h3>Possible Experiments</h3>
-    <ul>
-      <li *ngFor="let experiment of experiments">{{experiment}}</li>
-    </ul>
+  <h3>Possible Experiments</h3>
+  <ul>
+    <li (click)="addExperiment(experiment)" [class.selected]="currentExperiments.includes(experiment)" *ngFor="let experiment of experiments">{{experiment}}</li>
+  </ul>
+  <div class="container">
+    <input #name type="text"/>
+    <button (click)="new(name.value); name.value=''">New</button>
+  </div>
+  <p class="error">{{message}}</p>
 </div>
 <hr>
+<div class="displayBox">
+  <h3>Experiments on Board</h3>
+  <ul>
+    <li *ngFor="let experiment of currentExperiments">{{experiment}}</li>
+  </ul>
+</div>

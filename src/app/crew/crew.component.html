@@ -11,5 +11,10 @@
         <li (mouseover)="selected=astronaut" (mouseout)="selected=''" *ngFor="let astronaut of crew">{{astronaut.name}}</li>
     </ol>
     <!-- Add an img tag here to display astronaut photos. -->
-    <img *ngIf="selected" src="{{selected.photo}}"/>
+    <span class="info" *ngIf="selected">
+        <img src="{{selected.photo}}"/>
+        <br>
+        <div>Born: {{selected.born}}</div>
+        <div>Died: {{selected.died}}</div>
+    </span>
 </div>

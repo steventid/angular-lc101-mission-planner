@@ -6,3 +6,21 @@
 h3 {
     text-align: center;
 }
+
+li:hover {
+    cursor: pointer;
+}
+
+.selected {
+    color: goldenrod;
+}
+
+.container {
+    text-align: center;
+}
+
+.error {
+    text-align: center;
+    font-size: 1.15em;
+    color: brown; 
+}
