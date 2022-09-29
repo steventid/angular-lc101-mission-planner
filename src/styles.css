@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    background-image: linear-gradient(rgb(145, 146, 243), rgb(61, 62, 102));
+    min-height: 100vh;
+    min-width: 100vw;
+}

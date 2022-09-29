@@ -1,11 +1,13 @@
 .displayBox {
-    height: 275px;
+    height: auto;
     width: auto;
 }
 
 button {
     margin: 2px;
     cursor: pointer;
+    border-radius: 50px;
+    padding: 5px;
 }
 
 h3 {
@@ -20,6 +22,16 @@ h3 {
 
 /* Add the 'nearMaxMass' class style here: */
 .nearMaxMass {
+    font-size: 1.15rem;
     font-weight: bold;
     color: red;
+}
+
+.center {
+    text-align: center;
+}
+
+.emptyHold {
+    background-color: lightcoral;
+
 }

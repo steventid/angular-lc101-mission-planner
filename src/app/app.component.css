@@ -1,5 +1,10 @@
 .box {
     display: flex;
+    width: 60%;
+    margin: auto;
     padding: 10px;
     justify-content: space-evenly;
+    border-style: double;
+    border-radius: 30px;
+    border-color: aqua;
 }

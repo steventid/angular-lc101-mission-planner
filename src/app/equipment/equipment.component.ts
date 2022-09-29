@@ -33,8 +33,24 @@ export class EquipmentComponent implements OnInit {
     return(this.maximumAllowedMass - this.cargoMass <= 200);
    }
 
+   removeItem(index: number) {
+    this.cargoMass -= this.cargoHold[index]['mass'];
+    this.cargoHold.splice(index,1);
+    return(this.maximumAllowedMass - this.cargoMass <= 200);
+   }
+
+   cargoCount(equipment: object) {
+    let count = 0;
+    for (let cargo of this.cargoHold) {
+      if (cargo === equipment) {
+        count++;
+      }
+    }
+    return count;
+   }
+
    disableButton(equipment: object) {
-    return (this.cargoHold.length === this.maxItems || this.cargoMass + equipment['mass'] > this.maximumAllowedMass)
+    return (this.cargoHold.length === this.maxItems || this.cargoMass + equipment['mass'] > this.maximumAllowedMass || this.cargoCount(equipment) >= 2);
    }
 
    emptyHold() {
